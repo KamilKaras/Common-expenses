@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Current expenses</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+      <h1>Common expenses</h1>
+      <div class="add-user">
+        <h3>Add new trip user</h3>
+        <div class="add">
+          <input
+            id="input" 
+            type = "text"
+            class = "input-box"
+            placeholder="Write user name">
+          <button class="add-user-button" id="add">Add user</button>
+          <button class="add-payment-button" id="add">Add payment</button>
+        </div>
+        </div> 
+        <section class="users">
+          <h2>Current cost breakdown </h2>
+        </section> 
+        <div class="popup">
+          <div class="overlay"></div>
+          <div class="content">
+            <button class="close-btn">&times</button>
+            <h3>New payment</h3>
+            <input
+              type = "number"
+              class = "popup-input-box"
+              placeholder="Enter value">
+              <p>Who paid (choose from list)</p>
+            <select class = "popup-select-box">
+
+            </select>
+            <button class="accept-button">Potwierdź</button>
+          </div>
+        </div>
+    </main>
+ <script src="script.js"></script>
+</body>
+
+</html>

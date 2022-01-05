@@ -1,0 +1,140 @@
+html{
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+    background: #111827;
+    color: black;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    margin: 2rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border: solid;
+    background: burlywood;
+    border-radius: 1rem;
+    text-align: center;
+}
+.add-user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin: 2rem;
+    text-align: center;
+}
+.add{  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;  
+    width: 80%;
+    margin-bottom: 2rem;
+}
+.input-box, .popup-input-box{
+    width: 50%;
+    height: 1.5rem;
+    margin: 0.5rem;
+    min-width: 200px;
+    border-radius: 0.5rem;
+    padding: .5rem;
+}
+.popup-select-box{
+    width: 50%;
+    min-height: 2.5rem;
+    margin: 0.5rem;
+    min-width: 200px;
+    padding: .5rem;
+}
+.add-user-button, .add-payment-button{
+    border-radius: .5rem;
+    height: 2.5rem;
+    background: #111827;
+    padding: .5rem;
+    font-weight: 900;
+    color: white;
+}
+.accept-button{
+    border-radius: .5rem;
+    height: 2.5rem;
+    background: #111827;
+    padding: .5rem;
+    font-weight: 900;
+    color: white;
+    display: none;
+    margin: 10px;
+}
+.users{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin: 2rem;
+    text-align: center;
+}
+.user{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid;
+    border-radius: 1rem;
+    width: 90%;
+    margin: 2rem;
+    text-align: center;
+}
+.part{
+    margin: 1rem;
+}
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+.popup .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: burlywood;
+    width: 450px;
+    min-height: 35%;
+    z-index: 2;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.popup p{
+    font-size: 1.1rem;
+}
+.popup .close-btn{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 2rem;
+    background: #111827;
+    color: #FFF;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    text-align: center;
+}
+.popup{
+    display: none;
+}
