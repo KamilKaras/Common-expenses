@@ -2,51 +2,58 @@ html{
     font-family: inherit;
     font-size: 15px;
     box-sizing: border-box;
-    background: #111827;
     color: black;
 }
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 .container{
-    margin: 2rem;
-    font-size: 2rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    border: solid;
-    background: burlywood;
+    flex-direction: row;
     border-radius: 1rem;
     text-align: center;
+    min-height: 98vh;
 }
-.add-user{
+.menu {
     display: flex;
+    font-size: 1.5rem;
     flex-direction: column;
+    flex: 1;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    width: 90%;
-    margin: 2rem;
-    text-align: center;
+    justify-content: space-between;
+    background-color: #ff8502;
+    border-radius: 1rem;
 }
-.add{  
+.users {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;  
-    width: 80%;
-    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 6;
+    border-radius: 1rem;
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+.users h1{
+    font-size: 3rem;
+    border-bottom: solid silver;
+    margin: 5rem 2rem;
+}
+.user{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 1rem;
 }
 .input-box, .popup-input-box{
     width: 50%;
     height: 1.5rem;
-    margin: 0.5rem;
     min-width: 200px;
     border-radius: 0.5rem;
     padding: .5rem;
+    margin: 1rem;
 }
 .popup-select-box{
     width: 50%;
@@ -55,46 +62,22 @@ body{
     min-width: 200px;
     padding: .5rem;
 }
-.add-user-button, .add-payment-button{
-    border-radius: .5rem;
-    height: 2.5rem;
-    background: #111827;
-    padding: .5rem;
+.add-user-button,
+.add-payment-button,
+.accept-button {
+    background:transparent;
+    border:none;
     font-weight: 900;
-    color: white;
-}
-.accept-button{
-    border-radius: .5rem;
-    height: 2.5rem;
-    background: #111827;
-    padding: .5rem;
-    font-weight: 900;
-    color: white;
-    display: none;
-    margin: 10px;
-}
-.users{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 90%;
-    margin: 2rem;
-    text-align: center;
-}
-.user{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: solid;
-    border-radius: 1rem;
-    width: 90%;
-    margin: 2rem;
-    text-align: center;
-}
-.part{
+    color: black;
     margin: 1rem;
+    font-size: 1rem;
 }
+.accept-button {
+    background-color: #ff8502;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
 .popup .overlay{
     position: fixed;
     top: 0px;
@@ -112,9 +95,9 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: burlywood;
+    background: white;
     width: 450px;
-    min-height: 35%;
+    min-height: 25%;
     z-index: 2;
     text-align: center;
     padding: 1rem;
@@ -127,14 +110,18 @@ body{
     position: absolute;
     right: 1rem;
     top: 1rem;
-    width: 2rem;
-    background: #111827;
-    color: #FFF;
+    background: transparent;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 800;
     line-height: 1.5rem;
     text-align: center;
 }
 .popup{
     display: none;
+}
+.add-user-button:hover,
+.add-payment-button:hover,
+.accept-button:hover,
+.close-btn:hover {
+    cursor: pointer;
 }

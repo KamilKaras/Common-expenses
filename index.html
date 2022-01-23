@@ -9,39 +9,40 @@
 </head>
 <body>
   <main class="container">
-      <h1>Common expenses</h1>
+    <div class="menu">
       <div class="add-user">
-        <h3>Add new trip user</h3>
+        <h1>Common expenses</h1>
         <div class="add">
           <input
             id="input" 
             type = "text"
             class = "input-box"
-            placeholder="Write user name">
+            placeholder="Add new trip user">
           <button class="add-user-button" id="add">Add user</button>
-          <button class="add-payment-button" id="add">Add payment</button>
         </div>
-        </div> 
-        <section class="users">
-          <h2>Current cost breakdown </h2>
-        </section> 
-        <div class="popup">
-          <div class="overlay"></div>
-          <div class="content">
-            <button class="close-btn">&times</button>
-            <h3>New payment</h3>
-            <input
-              type = "number"
-              class = "popup-input-box"
-              placeholder="Enter value">
-              <p>Who paid (choose from list)</p>
-            <select class = "popup-select-box">
+        </div>
+        <button class="add-payment-button" id="add">Add payment</button> 
+    </div>
+    <section class="users">
+        <h1>Current cost breakdown </h1>
+    </section>
+    <div class="popup">
+      <div class="overlay"></div>
+        <div class="content">
+              <button class="close-btn">&times</button>
+              <h2>New payment</h2>
+              <input
+                type = "number"
+                class = "popup-input-box"
+                placeholder="Enter value">
+                <p>Who paid (choose from list)</p>
+          <select class = "popup-select-box">
 
-            </select>
-            <button class="accept-button">Potwierdź</button>
-          </div>
+          </select>
+          <button class="accept-button">Submit</button>
         </div>
-    </main>
+      </div>
+  </main>
  <script src="script.js"></script>
 </body>
 

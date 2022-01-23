@@ -8,7 +8,7 @@ var User = /** @class */ (function () {
         return this.nickName;
     };
     User.prototype.getBalance = function () {
-        return this.balance.toString();
+        return this.balance.toFixed(2).toString();
     };
     User.prototype.getId = function () {
         return this.userId;
@@ -73,8 +73,8 @@ function AddUserToHtml(user) {
 function AddToSelect(user) {
     var select = document.querySelector(".popup-select-box");
     var option = document.createElement('option');
-    option.value = "" + user.getNickName();
-    option.textContent = "" + user.getNickName();
+    option.value = "".concat(user.getNickName());
+    option.textContent = "".concat(user.getNickName());
     select.appendChild(option);
 }
 function CalculatePayment() {
@@ -92,6 +92,6 @@ function WhoPayed() {
     return selected.value;
 }
 function DataUpdate(user) {
-    var userBalance = document.getElementById("" + user.getId());
+    var userBalance = document.getElementById("".concat(user.getId()));
     userBalance.textContent = user.getBalance() + " zł";
 }

@@ -12,7 +12,7 @@ class User {
         return this.nickName;
     }
     public getBalance():string{
-        return this.balance.toString();
+        return this.balance.toFixed(2).toString();
     }
     public getId():number{
         return this.userId;
