@@ -103,9 +103,9 @@ function CalculatePayment(){
     const filtredListPay:Array <User> = usersList.filter(user => user.getNickName() == whoPaid);
     const filtredListNoPay:Array<User> = usersList.filter(user => user.getNickName() != whoPaid)
     const value:number = +(<HTMLInputElement>document.querySelector('.popup-input-box')).value;
-    const valueToAdd = value/filtredListNoPay.length;
+    const valueToAdd = value/usersList.length;
     filtredListNoPay.forEach(user => user.setBalance(-valueToAdd))
-    filtredListPay.forEach(user => user.setBalance(value));
+    filtredListPay.forEach(user => user.setBalance(valueToAdd));
     usersList.forEach(user => DataUpdate(user));
 
 }

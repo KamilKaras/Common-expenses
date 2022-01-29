@@ -82,9 +82,9 @@ function CalculatePayment() {
     var filtredListPay = usersList.filter(function (user) { return user.getNickName() == whoPaid; });
     var filtredListNoPay = usersList.filter(function (user) { return user.getNickName() != whoPaid; });
     var value = +document.querySelector('.popup-input-box').value;
-    var valueToAdd = value / filtredListNoPay.length;
+    var valueToAdd = value / usersList.length;
     filtredListNoPay.forEach(function (user) { return user.setBalance(-valueToAdd); });
-    filtredListPay.forEach(function (user) { return user.setBalance(value); });
+    filtredListPay.forEach(function (user) { return user.setBalance(valueToAdd); });
     usersList.forEach(function (user) { return DataUpdate(user); });
 }
 function WhoPayed() {
